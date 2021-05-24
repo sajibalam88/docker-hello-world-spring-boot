@@ -14,7 +14,7 @@ RUN apt-get update && \
 # copy files from the repository into this staging server
 COPY . .
 
-RUN docker build -t hello-world-java --target test
+RUN docker build -t="hello-world-java" --target test
 #RUN docker build -t java-docker --target test
 #RUN docker run -p 8080:8080 -it --rm hello-world-java
 #RUN curl localhost:8080
