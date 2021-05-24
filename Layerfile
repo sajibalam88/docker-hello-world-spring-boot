@@ -20,6 +20,6 @@ COPY . .
 RUN docker build -t="hello-world-java" .  
 #RUN docker build -t java-docker --target test
 RUN docker run -p 8080:8080 -itd --rm hello-world-java
-RUN curl -XGET http://localhost:8080/
+curl -XGET http://localhost:8080/
 RUN docker stop `docker container ls | grep "hello-world-java:*" | awk '{ print $1 }'`
 #EXPOSE WEBSITE http://localhost:80
