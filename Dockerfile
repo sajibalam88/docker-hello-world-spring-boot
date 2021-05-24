@@ -1,5 +1,10 @@
 # Maven build container 
 
+FROM ubuntu:20.04
+
+RUN apt-get update
+RUN apt-get install -y curl
+
 FROM maven:3.6.3-openjdk-11 AS maven_build
 
 COPY pom.xml /tmp/
