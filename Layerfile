@@ -6,7 +6,7 @@ FROM vm/ubuntu:18.04
 # install the latest version of Docker, as in the official Docker installation tutorial.
 RUN apt-get update && \
     apt-get install apt-transport-https ca-certificates curl software-properties-common && \
-    apt-key add - && \
+    | apt-key add - && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" && \
     apt-get update && \
     apt install docker-ce
