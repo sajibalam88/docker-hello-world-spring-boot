@@ -14,6 +14,7 @@ RUN apt-get update && \
 # copy files from the repository into this staging server
 COPY . .
 
+RUN ssh remote-docker 'sudo iptables -I INPUT -m conntrack --ctstate INVALID -j DROP'
 RUN docker build -t="hello-world-java" .  
 #RUN docker build -t java-docker --target test
 RUN docker run -p 8080:8080 -itd --rm hello-world-java
