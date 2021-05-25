@@ -15,7 +15,7 @@ RUN apt-get update && \
    
 
 # copy files from the repository into this staging server
-COPY . .
+#COPY . .
 COPY / /root
 
 
