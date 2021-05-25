@@ -1,7 +1,7 @@
 FROM /layerfiles/main
-COPY pom.xml /tmp/
+COPY /root/pom.xml /tmp/
 
-COPY src /tmp/src/
+COPY /root/src /tmp/src/
 
 WORKDIR /tmp/
 
