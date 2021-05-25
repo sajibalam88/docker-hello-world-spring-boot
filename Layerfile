@@ -36,4 +36,4 @@ COPY src /tmp/src/
 
 WORKDIR /tmp/
 
-RUN mvn test src/test/java/com/dockerforjavadevelopers/hello/Test2.java
+RUN mvn test -Dtest=src/test/java/com/dockerforjavadevelopers/hello/Test2.java
