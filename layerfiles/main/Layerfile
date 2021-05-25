@@ -19,7 +19,7 @@ RUN apt-get update && \
 COPY / /root
 
 
-RUN docker build "hello-world-java" .  
+RUN docker build -t="hello-world-java" .  
 #RUN docker build -t java-docker --target test
 RUN docker run -p 8080:8080 -itd --rm hello-world-java
 #RUN  chmod 777 ./src/test.sh
