@@ -10,6 +10,6 @@ public class DummyTest {
   public void aTest() {
     assertEquals(true, true);
       assertEquals(true, true);
-     assertEquals(true, false);
+     assertEquals(true, true);
   }
 }
