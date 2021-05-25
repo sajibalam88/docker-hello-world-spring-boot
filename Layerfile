@@ -24,6 +24,15 @@ RUN docker run -p 8080:8080 -itd --rm hello-world-java
 EXPOSE WEBSITE http://localhost:8080
 RUN curl -m 20  http://localhost:8080/hello
 RUN curl -m 20  http://localhost:8080/hi
-RUN mvn test src/test/java/com/dockerforjavadevelopers/hello/Test2.java
+#RUN mvn test src/test/java/com/dockerforjavadevelopers/hello/Test2.java
 #RUN docker stop `docker container ls | grep "hello-world-java:*" | awk '{ print $1 }'`
 #EXPOSE WEBSITE http://localhost:80
+FROM maven:3.6.3-openjdk-11 AS maven_build
+
+COPY pom.xml /tmp/
+
+COPY src /tmp/src/
+
+WORKDIR /tmp/
+
+RRUN mvn test src/test/java/com/dockerforjavadevelopers/hello/Test2.java
