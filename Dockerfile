@@ -13,7 +13,7 @@ COPY src /tmp/src/
 
 WORKDIR /tmp/
 
-RUN mvn test package
+RUN mvn package
 
 #pull base image
 
