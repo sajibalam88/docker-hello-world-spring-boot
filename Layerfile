@@ -24,5 +24,5 @@ RUN docker run -p 8080:8080 -itd --rm hello-world-java
 EXPOSE WEBSITE http://localhost:8080
 RUN curl -m 20  http://localhost:8080/hello
 RUN curl -m 20  http://localhost:8080/hi
-RUN docker stop `docker container ls | grep "hello-world-java:*" | awk '{ print $1 }'`
+#RUN docker stop `docker container ls | grep "hello-world-java:*" | awk '{ print $1 }'`
 #EXPOSE WEBSITE http://localhost:80
