@@ -1,0 +1,8 @@
+FROM /layerfiles/main
+COPY pom.xml /tmp/
+
+COPY src /tmp/src/
+
+WORKDIR /tmp/
+
+RUN mvn -Dtest=com/dockerforjavadevelopers/hello/DummyTest test
