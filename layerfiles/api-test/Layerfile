@@ -1,0 +1,3 @@
+FROM /layerfiles/main
+RUN curl -m 20  http://localhost:8080/hello
+RUN curl -m 20  http://localhost:8080/hi
