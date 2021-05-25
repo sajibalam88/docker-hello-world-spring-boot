@@ -9,5 +9,6 @@ public class DummyTest {
   @Test
   public void aTest() {
     assertEquals(true, true);
+      assertEquals(true, true);
   }
 }
